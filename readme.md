@@ -260,7 +260,7 @@ Response example:
 Run tests using:
 
 ```bash
-npx mocha __tests__/*.test.ts
+npx mocha tests/*.test.ts
 ```
 
 This documentation now includes the base URL `http://localhost:3000` for accessing the running application, which provides a clear starting point for interacting with the `REST API` endpoints.
