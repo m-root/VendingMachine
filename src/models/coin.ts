@@ -1,11 +1,6 @@
 export class Coin {
     constructor(private value: number, private quantity: number) {}
 
-    // Getter for the value of the coins
-    getValue(): number {
-        return this.value;
-    }
-
     // Getter for the quantity of the coins
     getQuantity(): number {
         return this.quantity;
