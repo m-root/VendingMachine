@@ -5,10 +5,6 @@ export class Product {
         private quantity: number
     ) {}
 
-    // Getter for the name of the products
-    getName(): string {
-        return this.name;
-    }
 
     // Getter for the price of the products
     getPrice(): number {
