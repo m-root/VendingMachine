@@ -70,7 +70,7 @@ This launches the server, listening on the default port `3000`. The server can b
 The application provides `REST` endpoints for both standard and maintenance users:
 
 - Standard User:
-  - `POST /user/buy`: Buy a product using the product slot and coin amounts.
+  - `PUT /user/buy`: Buy a product using the product slot and coin amounts.
 
 - Maintenance User:
   - Set product prices.
@@ -81,7 +81,7 @@ Customize these endpoints as needed.
 
 Coins accepted: 5, 10, 25, 50 cents.
 
-Example `POST` request:
+Example `PUT` request:
 
 ```json
 {
@@ -190,7 +190,7 @@ Response:
 
 Assign a new price to a product.
 
-`POST /maintenance/set-price`
+`PUT /maintenance/set-price`
 
 Request example:
 
@@ -236,13 +236,13 @@ Response example:
 
 Change the quantity of a coin type.
 
-`POST /maintenance/update-coins`
+`PUT /maintenance/update-coins`
 
 Request example:
 
 ```json
 {
-  "coinValue": 0.25,
+  "coinValue": 25,
   "newQuantity": 25
 }
 ```
