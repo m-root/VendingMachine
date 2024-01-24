@@ -15,7 +15,7 @@ maintenanceRouter.get("/coins", (req, res) => {
   return res.json(coinInventory);
 });
 
-maintenanceRouter.post("/set-price", (req, res) => {
+maintenanceRouter.put("/set-price", (req, res) => {
   try {
     const { productSlot, newPrice } = req.body;
 
@@ -32,7 +32,7 @@ maintenanceRouter.post("/set-price", (req, res) => {
   }
 });
 
-maintenanceRouter.post("/adjust-quantity", (req, res) => {
+maintenanceRouter.put("/adjust-quantity", (req, res) => {
   try {
     const { productSlot, newQuantity } = req.body;
 
@@ -53,7 +53,7 @@ maintenanceRouter.post("/adjust-quantity", (req, res) => {
   }
 });
 
-maintenanceRouter.post("/update-coins", (req, res) => {
+maintenanceRouter.put("/update-coins", (req, res) => {
   try {
     const { coinValue, newQuantity } = req.body;
     const message = vendingMachine.updateCoinQuantity(coinValue, newQuantity);
